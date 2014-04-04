@@ -30,6 +30,7 @@ ng-min is to creating minfiable Angular syntax.
 </body>
 </html>
 ```
+#### <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="HTML5 Valid" width="64" height="64"/>
 
 ## Install
 
