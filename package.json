@@ -1,34 +1,33 @@
 {
-  "name": "gulp-angular-htmlify",
-  "version": "0.0.2",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "description": "Change your ng-attributes to data-ng-attributes for html5 validation",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "keywords": [
-    "gulp",
-    "gulpplugin",
-    "angular",
-    "w3c",
-    "validator",
-    "html5",
-    "data-ng",
-    "ng"
-  ],
-  "author": {
-    "name": "Gilad Peleg",
-    "email": "giladp007@gmail.com"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "mocha": "^1.18.2"
-  },
-  "dependencies": {
-    "gulp-util": "^2.2.14",
-    "through2": "^0.4.1"
-  }
+    "name": "gulp-angular-htmlify",
+    "version": "0.0.2",
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "description": "Change your ng-attributes to data-ng-attributes for html5 validation",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [
+        "gulpplugin",
+        "angular",
+        "w3c",
+        "validator",
+        "html5",
+        "data-ng",
+        "ng"
+    ],
+    "author": {
+        "name": "Gilad Peleg",
+        "email": "giladp007@gmail.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "mocha": "^1.18.2"
+    },
+    "dependencies": {
+        "gulp-util": "^2.2.14",
+        "through2": "^0.4.1"
+    }
 }
