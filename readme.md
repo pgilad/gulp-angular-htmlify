@@ -13,6 +13,24 @@ The solution everyone recommends is to add `data` to all your `ng` directives.
 Now with `gulp` this can be easily made part of your build flow, similar to how
 ng-min is to creating minfiable Angular syntax.
 
+**Turn this:**
+```html
+<html ng-app="myApp">
+...
+<body ng-controller="MainCtrl">
+</body>
+</html>
+```
+
+**Into this:**
+```html
+<html data-ng-app="myApp">
+...
+<body data-ng-controller="MainCtrl">
+</body>
+</html>
+```
+
 ## Install
 
 Install with [npm](https://npmjs.org/package/gulp-angular-htmlify)
