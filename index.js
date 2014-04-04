@@ -2,7 +2,7 @@
 var gutil = require('gulp-util');
 var through = require('through2');
 
-module.exports = function(params) {
+module.exports = function (params) {
     //perhaps in the future
     params = params || {};
     var verbose = params.verbose || false;
@@ -12,7 +12,7 @@ module.exports = function(params) {
     //replace with data-ng-something
     var replaceStr = '$1data-ng-$2';
 
-    return through.obj(function(file, enc, cb) {
+    return through.obj(function (file, enc, cb) {
         //pass through
         if (file.isNull()) {
             this.push(file);
