@@ -40,6 +40,10 @@ ng-min is to creating minfiable Angular syntax.
 <ng-directive></ng-directive>
 <!-- self closing element -->
 <ng-directive />
+<!-- custom directive prefix -->
+<ui-router></ui-router>
+<!-- your name prefix -->
+<gilad-cool-loader></gilad-cool-loader>
 ```
 
 ## Install
@@ -69,6 +73,18 @@ gulp.task('htmlify', function() {
 
 params is an object that contains the following settings:
 
+#### customPrefixes
+
+Type: `Array`
+
+An array to optionally add custom prefixes to the list of converted directives.
+
+For example: `['ui-', 'gijo-']`
+
+*Note: for this to work - you will need to make sure your directives **can** load with a `data-` prefix.*
+
+Defaults to **[]**
+
 #### verbose
 
 Type: `Boolean`
@@ -81,7 +97,8 @@ Example usage:
 ```js
 //...
 .pipe(htmlify({
-    verbose:true
+    verbose:true,
+    customPrefixes: ['ui-']
     }))
 // --> [gulp] Found and replaced ng-directives in index.html
 //...

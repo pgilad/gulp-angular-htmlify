@@ -111,3 +111,35 @@ it('should not change anything other than angular directives', function (cb) {
 
     stream.end();
 });
+
+it('should work with custom prefixes', function (cb) {
+    var stream = htmlify({
+        customPrefixes: ['ui-', 'gijo-']
+    });
+    var filename = './fixtures/angular-custom.html';
+
+    stream.on('data', function (file) {
+        //make sure ng-app turned into data-ng-app
+        var contents = file.contents.toString('utf8');
+
+        //test that ui-router is handled
+        assert(/data-ui-router/.test(contents));
+        assert(!/[^-]ui-router/.test(contents));
+
+        //test that data-ng appears
+        assert(/\s+data-gijo-loader/.test(contents));
+        assert(!/\s+gijo-loader/.test(contents));
+    });
+
+    stream.on('end', cb);
+
+    var testFile = fs.readFileSync(filename);
+
+    stream.write(new gutil.File({
+        path: filename,
+        cwd: '.',
+        contents: new Buffer(testFile.toString())
+    }));
+
+    stream.end();
+});

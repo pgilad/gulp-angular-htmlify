@@ -6,11 +6,28 @@ module.exports = function (params) {
     //perhaps in the future
     params = params || {};
     var verbose = params.verbose || false;
+    var customPrefixes = params.customPrefixes || [];
 
-    //find ng-something
-    var replaceRegex = /([\s<\/]+)ng-(\w+)/ig;
+    //find ng-something by default
+    var prefix = 'ng-';
+    //optionally add custom prefixes
+    if (customPrefixes && customPrefixes.length) {
+        var additions = customPrefixes.join('|');
+        prefix += '|';
+        prefix += additions;
+    }
+
+    //wrap around to insert into replace str later
+    prefix = '(' + prefix + '){1}';
+
+    //build find/replace regex
+    //$1 -> allowable pre-chars
+    //$2 -> prefix match
+    //$3 -> actual directive (partially)
+    var replaceRegex = new RegExp('([\\s<\/]+)' + prefix + '(\\w+)', 'ig');
+
     //replace with data-ng-something
-    var replaceStr = '$1data-ng-$2';
+    var replaceStr = '$1data-$2$3';
 
     return through.obj(function (file, enc, cb) {
         //pass through
