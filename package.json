@@ -1,41 +1,41 @@
 {
-    "name": "gulp-angular-htmlify",
-    "description": "Change your ng-attributes to data-ng-attributes for html5 validation",
-    "version": "0.0.3",
-    "engines": {
-        "node": ">=0.10.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pgilad/gulp-angular-htmlify"
-    },
-    "homepage": "https://github.com/pgilad/gulp-angular-htmlify",
-    "bugs": "https://github.com/pgilad/gulp-angular-htmlify/issues",
-    "main": "index.js",
-    "scripts": {
-        "watchTest": "mocha --watch",
-        "test": "mocha"
-    },
-    "keywords": [
-        "gulpplugin",
-        "gulp",
-        "angular",
-        "w3c",
-        "validator",
-        "html5",
-        "data-ng",
-        "ng"
-    ],
-    "author": {
-        "name": "Gilad Peleg",
-        "email": "giladp007@gmail.com"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "mocha": "*"
-    },
-    "dependencies": {
-        "gulp-util": "^2.2.14",
-        "through2": "^0.4.1"
-    }
+  "name": "gulp-angular-htmlify",
+  "description": "Change your ng-attributes to data-ng-attributes for html5 validation",
+  "version": "0.0.4",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pgilad/gulp-angular-htmlify"
+  },
+  "homepage": "https://github.com/pgilad/gulp-angular-htmlify",
+  "bugs": "https://github.com/pgilad/gulp-angular-htmlify/issues",
+  "main": "index.js",
+  "scripts": {
+    "watchTest": "mocha --watch",
+    "test": "mocha"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "angular",
+    "w3c",
+    "validator",
+    "html5",
+    "data-ng",
+    "ng"
+  ],
+  "author": {
+    "name": "Gilad Peleg",
+    "email": "giladp007@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "dependencies": {
+    "gulp-util": "^2.2.14",
+    "through2": "^0.4.1"
+  }
 }
