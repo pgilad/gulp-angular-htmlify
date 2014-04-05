@@ -32,7 +32,7 @@ ng-min is to creating minfiable Angular syntax.
 ```
 #### <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="HTML5 Valid" width="64" height="64"/>
 
-**gulp-angular-htmlify** currently handles the following cases:
+**gulp-angular-htmlify** can handle the following cases:
 ```html
 <!-- attribute -->
 <ANY ng-directive>
@@ -45,6 +45,8 @@ ng-min is to creating minfiable Angular syntax.
 <!-- your name prefix -->
 <gilad-cool-loader></gilad-cool-loader>
 ```
+
+And handles `ng-directives` by default. This behavior can be extended with the option `customPrefixes`.
 
 ## Install
 
