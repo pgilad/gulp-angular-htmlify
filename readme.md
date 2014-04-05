@@ -32,6 +32,16 @@ ng-min is to creating minfiable Angular syntax.
 ```
 #### <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="HTML5 Valid" width="64" height="64"/>
 
+**gulp-angular-htmlify** currently handles the following cases:
+```html
+<!-- attribute -->
+<ANY ng-directive>
+<!-- regular element -->
+<ng-directive></ng-directive>
+<!-- self closing element -->
+<ng-directive />
+```
+
 ## Install
 
 Install with [npm](https://npmjs.org/package/gulp-angular-htmlify)

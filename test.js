@@ -67,6 +67,12 @@ it('should handle a complex angular app', function (cb) {
         assert(/\s+data-ng-if/.test(contents));
         //test that ng-if doesn't appear
         assert(!/\s+ng-if/.test(contents));
+        //handle a <ng-include> directive
+        assert(/<data-ng-include/.test(contents));
+        //test that ng-if doesn't appear
+        assert(!/<ng-include/.test(contents));
+        //handle a <ng-include> directive
+        assert(/<data-ng-pluralize/.test(contents));
     });
 
     stream.on('end', cb);

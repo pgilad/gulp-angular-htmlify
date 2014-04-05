@@ -8,7 +8,7 @@ module.exports = function (params) {
     var verbose = params.verbose || false;
 
     //find ng-something
-    var replaceRegex = /(\s+)ng-(\w+)/ig;
+    var replaceRegex = /([\s<\/]+)ng-(\w+)/ig;
     //replace with data-ng-something
     var replaceStr = '$1data-ng-$2';
 

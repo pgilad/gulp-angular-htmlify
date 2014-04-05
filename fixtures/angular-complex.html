@@ -10,8 +10,11 @@
 <body ng-controller="MainCtrl">
     <div ng-class="{active:somethingForNothing()}">
         <span ng-if="rainbows()"></span>
-
     </div>
+    <ng-include="index.html"></ng-include>
+        <ng-pluralize count="personCount" when="{'0': 'Nobody is viewing.',
+                                             'one': '1 person is viewing.',
+                                             'other': '{} people are viewing.'}" />
 </body>
 
 </html>
