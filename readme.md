@@ -83,7 +83,7 @@ An array to optionally add custom prefixes to the list of converted directives.
 
 For example: `['ui-', 'gijo-']`
 
-*Note: for this to work - you will need to make sure your directives **can** load with a `data-` prefix.*
+*Note: for this to work - you will need to make sure your directives can load with a `data-` prefix.*
 
 Defaults to **[]**
 
