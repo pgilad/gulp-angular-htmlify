@@ -13,7 +13,7 @@
   "bugs": "https://github.com/pgilad/gulp-angular-htmlify/issues",
   "main": "index.js",
   "scripts": {
-    "watchTest": "mocha --watch",
+    "watchTest": "mocha -R spec --watch",
     "test": "mocha"
   },
   "keywords": [

@@ -143,3 +143,27 @@ it('should work with custom prefixes', function (cb) {
 
     stream.end();
 });
+
+it('should not modify ng-template script', function (cb) {
+    var stream = htmlify();
+    var filename = './fixtures/angular-templates.html';
+
+    stream.on('data', function (file) {
+        //make sure ng-app turned into data-ng-app
+        var contents = file.contents.toString('utf8');
+        //validate that ng-templates don't change
+        assert(/type="text\/ng-template"/.test(contents));
+    });
+
+    stream.on('end', cb);
+
+    var testFile = fs.readFileSync(filename);
+
+    stream.write(new gutil.File({
+        path: filename,
+        cwd: '.',
+        contents: new Buffer(testFile.toString())
+    }));
+
+    stream.end();
+});

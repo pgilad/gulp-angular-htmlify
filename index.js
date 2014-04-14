@@ -9,7 +9,7 @@ module.exports = function (params) {
     var customPrefixes = params.customPrefixes || [];
 
     //find ng-something by default
-    var prefix = '[^\/]ng-';	//Denis Bondarenko changed to support templates, inlined with script tag like ...type="text/ng-template"
+    var prefix = 'ng-';
     //optionally add custom prefixes
     if (customPrefixes && customPrefixes.length) {
         var additions = customPrefixes.join('|');
@@ -20,11 +20,16 @@ module.exports = function (params) {
     //wrap around to insert into replace str later
     prefix = '(' + prefix + '){1}';
 
+    //handle the following:
+    //1. ' ng-'
+    //2. '<ng-'
+    //3. '</ng-'
+    var allowedPreChars = '(\\s|<|<\/){1}';
     //build find/replace regex
     //$1 -> allowable pre-chars
     //$2 -> prefix match
     //$3 -> actual directive (partially)
-    var replaceRegex = new RegExp('([\\s<\/]+)' + prefix + '(\\w+)', 'ig');
+    var replaceRegex = new RegExp(allowedPreChars + prefix + '(\\w+)', 'ig');
 
     //replace with data-ng-something
     var replaceStr = '$1data-$2$3';
