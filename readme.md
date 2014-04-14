@@ -1,17 +1,17 @@
 # [gulp](https://github.com/wearefractal/gulp)-angular-htmlify
 
-> Change your ng-attributes to data-ng-attributes for html5 validation
+> Change your ng-attributes to data-ng-attributes for HTML5 validation
 
 [![NPM Version](http://img.shields.io/npm/v/gulp-angular-htmlify.svg)](https://npmjs.org/package/gulp-angular-htmlify)
 [![NPM Downloads](http://img.shields.io/npm/dm/gulp-angular-htmlify.svg)](https://npmjs.org/package/gulp-angular-htmlify)
 [![Dependencies](http://img.shields.io/gemnasium/pgilad/gulp-angular-htmlify.svg)](https://gemnasium.com/pgilad/gulp-angular-htmlify)
 [![Build Status](https://travis-ci.org/pgilad/gulp-angular-htmlify.svg?branch=master)](https://travis-ci.org/pgilad/gulp-angular-htmlify)
 
-Ever tried to run an Angular html page into w3c validator? Yeah it's a mess.
+Ever tried to run an Angular HTML page into w3c validator? Yeah it's a mess.
 
 The solution everyone recommends is to add `data` to all your `ng` directives.
 Now with `gulp` this can be easily made part of your build flow, similar to how
-ng-min is to creating minfiable Angular syntax.
+ng-min is to creating minifiable Angular syntax.
 
 **Turn this:**
 ```html
@@ -32,7 +32,7 @@ ng-min is to creating minfiable Angular syntax.
 ```
 #### <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="HTML5 Valid" width="64" height="64"/>
 
-**gulp-angular-htmlify** can handle the following cases:
+**gulp-angular-htmlify** looks for `ng-` directives by default and can handle the following cases:
 ```html
 <!-- attribute -->
 <ANY ng-directive>
@@ -46,7 +46,9 @@ ng-min is to creating minfiable Angular syntax.
 <gilad-cool-loader></gilad-cool-loader>
 ```
 
-And handles `ng-directives` by default. This behavior can be extended with the option `customPrefixes`.
+You can add additional prefixes using the option `customPrefixes`.
+
+This plugin plays nice with `type="text/ng-template"` and won't break it.
 
 ## Install
 
@@ -73,7 +75,7 @@ gulp.task('htmlify', function() {
 
 ### htmlify(params)
 
-params is an object that contains the following settings:
+`params` is an object that contains the following settings:
 
 #### customPrefixes
 
@@ -82,6 +84,8 @@ Type: `Array`
 An array to optionally add custom prefixes to the list of converted directives.
 
 For example: `['ui-', 'gijo-']`
+
+By default only `ng-` prefixes are are handled. Any items you add here will be handled as well.
 
 *Note: for this to work - you will need to make sure your directives can load with a `data-` prefix.*
 
