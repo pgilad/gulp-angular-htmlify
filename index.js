@@ -9,7 +9,7 @@ module.exports = function (params) {
     var customPrefixes = params.customPrefixes || [];
 
     //find ng-something by default
-    var prefix = 'ng-';
+    var prefix = '[^\/]ng-';	//Denis Bondarenko changed to support templates, inlined with script tag like ...type="text/ng-template"
     //optionally add custom prefixes
     if (customPrefixes && customPrefixes.length) {
         var additions = customPrefixes.join('|');
