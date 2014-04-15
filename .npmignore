@@ -1,9 +1,8 @@
 .DS_Store
 .editorconfig
-.git*
-.idea
+.git/
+.idea/
 .jshintrc
-.npmignore
 .travis.yml
 fixtures/
 gulpfile.js
