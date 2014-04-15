@@ -1,7 +1,7 @@
 {
   "name": "gulp-angular-htmlify",
   "description": "Change your ng-attributes to data-ng-attributes for html5 validation",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "node": ">=0.10.0"
   },
