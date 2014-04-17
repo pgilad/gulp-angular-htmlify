@@ -89,7 +89,7 @@ By default only `ng-` prefixes are are handled. Any items you add here will be h
 
 *Note: for this to work - you will need to make sure your directives can load with a `data-` prefix.*
 
-Defaults to **[ ]**
+Defaults to `[ ]`
 
 #### verbose
 
