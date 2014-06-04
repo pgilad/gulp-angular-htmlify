@@ -36,10 +36,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^1.20.0"
+    "gulp-util": "^2.2.16",
+    "mocha": "^1.20.1"
   },
   "dependencies": {
+    "angular-html5": "^0.1.1",
     "gulp-util": "^2.2.14",
-    "through2": "^0.4.2"
+    "through2": "^0.5.1"
   }
 }

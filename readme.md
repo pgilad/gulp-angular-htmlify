@@ -50,6 +50,8 @@ You can add additional prefixes using the option `customPrefixes`.
 
 This plugin plays nice with `type="text/ng-template"` and won't break it.
 
+*Issues with the output should be reported on the ng-annotate [issue tracker](https://github.com/pgilad/angular-html5/issues).*
+
 ## Install
 
 Install with [npm](https://npmjs.org/package/gulp-angular-htmlify)
