@@ -4,7 +4,6 @@
 
 [![NPM Version](http://img.shields.io/npm/v/gulp-angular-htmlify.svg?style=flat)](https://npmjs.org/package/gulp-angular-htmlify)
 [![NPM Downloads](http://img.shields.io/npm/dm/gulp-angular-htmlify.svg?style=flat)](https://npmjs.org/package/gulp-angular-htmlify)
-[![Dependencies](http://img.shields.io/gemnasium/pgilad/gulp-angular-htmlify.svg?style=flat)](https://gemnasium.com/pgilad/gulp-angular-htmlify)
 [![Build Status](http://img.shields.io/travis/pgilad/gulp-angular-htmlify.svg?style=flat)](https://travis-ci.org/pgilad/gulp-angular-htmlify)
 
 Ever tried to run an Angular HTML page into w3c validator? Yeah it's a mess.
@@ -50,7 +49,7 @@ You can add additional prefixes using the option `customPrefixes`.
 
 This plugin plays nice with `type="text/ng-template"` and won't break it.
 
-*Issues with the output should be reported on the ng-annotate [issue tracker](https://github.com/pgilad/angular-html5/issues).*
+*Issues with the output should be reported on the [angular-html5 issue tracker](https://github.com/pgilad/angular-html5/issues).*
 
 ## Install
 
