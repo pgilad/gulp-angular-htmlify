@@ -17,8 +17,8 @@
     "license.md"
   ],
   "scripts": {
-    "watchTest": "mocha -R spec --watch",
-    "test": "mocha"
+    "watchTest": "mocha -R spec -w ./tests/*.js",
+    "test": "mocha -R spec ./tests/*.js"
   },
   "keywords": [
     "gulpplugin",

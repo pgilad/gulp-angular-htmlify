@@ -5,19 +5,17 @@ var through = require('through2');
 module.exports = function (params) {
     //perhaps in the future
     params = params || {};
-    var verbose = params.verbose || false;
+    var verbose = Boolean(params.verbose);
     var htmlify = require('angular-html5')({
         customPrefixes: params.customPrefixes
     });
 
     return through.obj(function (file, enc, cb) {
-        //pass through
         if (file.isNull()) {
             this.push(file);
             return cb();
         }
 
-        //streams not supported
         if (file.isStream()) {
             this.emit('error', new gutil.PluginError('gulp-angular-htmlify', 'Streaming not supported'));
             return cb();
@@ -26,14 +24,12 @@ module.exports = function (params) {
         var data = file.contents.toString('utf8');
         //if ng-directives exist
         if (htmlify.test(data)) {
-            data = htmlify.replace(data);
-            //put contents back
-            file.contents = new Buffer(data);
+            //replace contents and assign them back to stream contents
+            file.contents = new Buffer(htmlify.replace(data));
             if (verbose) {
                 //get filename or unknown
-                var filename = file.path ? gutil.colors.magenta(file.path) : gutil.colors.red('unknown');
-                //log replaced
-                gutil.log(gutil.colors.blue('angular-htmlify') + ' found and replaced ng-directives in ' + filename);
+                var filename = gutil.colors.magenta(file.path || 'unknown');
+                gutil.log(gutil.colors.blue('angular-htmlify'), 'found and replaced ng-directives in ' + filename);
             }
         }
 

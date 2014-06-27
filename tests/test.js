@@ -2,11 +2,11 @@
 var assert = require('assert');
 var fs = require('fs');
 var gutil = require('gulp-util');
-var htmlify = require('./index');
+var htmlify = require('../index');
 
 it('should handle a no angular file', function (cb) {
     var stream = htmlify();
-    var filename = './fixtures/noangular.html';
+    var filename = './tests/fixtures/noangular.html';
 
     stream.on('data', function (file) {
         //make sure file was not changed
@@ -26,7 +26,7 @@ it('should handle a no angular file', function (cb) {
 
 it('should handle a basic angular app', function (cb) {
     var stream = htmlify();
-    var filename = './fixtures/angular-basic.html';
+    var filename = './tests/fixtures/angular-basic.html';
 
     stream.on('data', function (file) {
         //make sure ng-app turned into data-ng-app
@@ -50,7 +50,7 @@ it('should handle a basic angular app', function (cb) {
 
 it('should handle a complex angular app', function (cb) {
     var stream = htmlify();
-    var filename = './fixtures/angular-complex.html';
+    var filename = './tests/fixtures/angular-complex.html';
 
     stream.on('data', function (file) {
         //make sure ng-app turned into data-ng-app
@@ -90,7 +90,7 @@ it('should handle a complex angular app', function (cb) {
 
 it('should not change anything other than angular directives', function (cb) {
     var stream = htmlify();
-    var filename = './fixtures/angular-complex.html';
+    var filename = './tests/fixtures/angular-complex.html';
 
     stream.on('data', function (file) {
         //make sure ng-app turned into data-ng-app
@@ -116,7 +116,7 @@ it('should work with custom prefixes', function (cb) {
     var stream = htmlify({
         customPrefixes: ['ui-', 'gijo-']
     });
-    var filename = './fixtures/angular-custom.html';
+    var filename = './tests/fixtures/angular-custom.html';
 
     stream.on('data', function (file) {
         //make sure ng-app turned into data-ng-app
@@ -146,7 +146,7 @@ it('should work with custom prefixes', function (cb) {
 
 it('should not modify ng-template script', function (cb) {
     var stream = htmlify();
-    var filename = './fixtures/angular-templates.html';
+    var filename = './tests/fixtures/angular-templates.html';
 
     stream.on('data', function (file) {
         //make sure ng-app turned into data-ng-app
