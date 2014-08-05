@@ -65,9 +65,27 @@ npm install --save-dev gulp-angular-htmlify
 var gulp = require('gulp');
 var htmlify = require('gulp-angular-htmlify');
 
+//simple usage
 gulp.task('htmlify', function() {
     gulp.src('public/**/*.html')
         .pipe(htmlify())
+        .pipe(gulp.dest('build/'));
+});
+
+//using jade as a pre-processer
+gulp.task('htmlify', function() {
+    gulp.src('partials/**/*.jade')
+        .pipe(jade())
+        .pipe(htmlify())
+        .pipe(gulp.dest('build/'));
+});
+
+//Also transforming ui-attributes to data-ui-attributes
+gulp.task('htmlify', function() {
+    gulp.src('public/**/*.html')
+        .pipe(htmlify({
+            customPrefixes: ['ui-']
+        }))
         .pipe(gulp.dest('build/'));
 });
 ```
@@ -82,6 +100,8 @@ gulp.task('htmlify', function() {
 
 Type: `Array`
 
+Default: `[]`
+
 An array to optionally add custom prefixes to the list of converted directives.
 
 For example: `['ui-', 'gijo-']`
@@ -90,15 +110,13 @@ By default only `ng-` prefixes are are handled. Any items you add here will be h
 
 *Note: for this to work - you will need to make sure your directives can load with a `data-` prefix.*
 
-Defaults to `[ ]`
-
 #### verbose
 
 Type: `Boolean`
 
-Whether to log files that had ng-directives detected and replaced. (Useful for debugging).
+Default: `false`
 
-Defaults to **false**.
+Whether to log files that had ng-directives detected and replaced. (Useful for debugging).
 
 Example usage:
 ```js

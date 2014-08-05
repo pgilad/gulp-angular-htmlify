@@ -3,7 +3,6 @@ var gutil = require('gulp-util');
 var through = require('through2');
 
 module.exports = function (params) {
-    //perhaps in the future
     params = params || {};
     var verbose = Boolean(params.verbose);
     var htmlify = require('angular-html5')({
