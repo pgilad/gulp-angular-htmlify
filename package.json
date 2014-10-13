@@ -1,46 +1,43 @@
 {
-  "name": "gulp-angular-htmlify",
-  "description": "Change your ng-attributes to data-ng-attributes for HTML5 validation",
-  "version": "0.5.1",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pgilad/gulp-angular-htmlify"
-  },
-  "homepage": "https://github.com/pgilad/gulp-angular-htmlify",
-  "bugs": "https://github.com/pgilad/gulp-angular-htmlify/issues",
-  "main": "index.js",
-  "files": [
-    "index.js",
-    "license.md"
-  ],
-  "scripts": {
-    "watchTest": "mocha -R spec -w ./tests/*.js",
-    "test": "mocha -R spec ./tests/*.js"
-  },
-  "keywords": [
-    "gulpplugin",
-    "gulp",
-    "angular",
-    "w3c",
-    "validator",
-    "html5",
-    "data-ng",
-    "ng"
-  ],
-  "author": {
-    "name": "Gilad Peleg",
-    "email": "giladp007@gmail.com"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "mocha": "*"
-  },
-  "dependencies": {
-    "angular-html5": "^0.3.0",
-    "gulp-util": "^3.0.1",
-    "through2": "^0.6.3"
-  }
+    "name": "gulp-angular-htmlify",
+    "description": "Change your ng-attributes to data-ng-attributes for HTML5 validation",
+    "version": "0.5.1",
+    "repository": "pgilad/gulp-angular-htmlify",
+    "author": {
+        "name": "Gilad Peleg",
+        "email": "giladp007@gmail.com"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "homepage": "https://github.com/pgilad/gulp-angular-htmlify",
+    "bugs": "https://github.com/pgilad/gulp-angular-htmlify/issues",
+    "main": "index.js",
+    "files": [
+        "index.js",
+        "license.md"
+    ],
+    "scripts": {
+        "watchTest": "mocha -R spec -w ./tests/*.js",
+        "test": "mocha -R spec ./tests/*.js"
+    },
+    "keywords": [
+        "gulpplugin",
+        "gulp",
+        "angular",
+        "w3c",
+        "validator",
+        "html5",
+        "data-ng",
+        "ng"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "mocha": "*"
+    },
+    "dependencies": {
+        "angular-html5": "^0.3.0",
+        "gulp-util": "^3.0.1",
+        "through2": "^0.6.3"
+    }
 }
