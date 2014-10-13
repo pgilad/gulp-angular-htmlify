@@ -122,7 +122,7 @@ Example usage:
 ```js
 //...
 .pipe(htmlify({
-    verbose:true,
+    verbose: true,
     customPrefixes: ['ui-']
     }))
 // --> [gulp] Found and replaced ng-directives in index.html
