@@ -73,4 +73,4 @@ Example usage:
 
 ## License
 
-MIT © [Gilad Peleg](https://github.com/pgilad)
+MIT @[Gilad Peleg](http://giladpeleg.com)
