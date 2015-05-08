@@ -1,6 +1,6 @@
 {
   "name": "gulp-angular-htmlify",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Change your ng-attributes to data-ng-attributes for HTML5 validation",
   "repository": "pgilad/gulp-angular-htmlify",
   "license": "MIT",
