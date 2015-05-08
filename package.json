@@ -31,9 +31,9 @@
     "ng"
   ],
   "dependencies": {
-    "angular-html5": "^2.2.1",
-    "gulp-util": "^3.0.1",
-    "through2": "^0.6.3"
+    "angular-html5": "^2.4.0",
+    "gulp-util": "^3.0.4",
+    "through2": "^0.6.5"
   },
   "devDependencies": {
     "mocha": "*"
